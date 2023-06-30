@@ -40,3 +40,10 @@ jobs:
 
       - name: Build
         run: python -m build
+
+      - name: Upload build output
+        uses: actions/upload-artifact@main
+        with:
+            name: clp-logging
+            path: ${{github.workspace}}/dist/*
+
